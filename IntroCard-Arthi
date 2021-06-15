@@ -1,0 +1,98 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+      myapp()
+  );
+}
+
+class myapp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body : SafeArea (
+
+          child : Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            //verticalDirection: VerticalDirection.up,
+            //crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/arthi.jpg'),
+              ),
+              Text (
+                'Arthi',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold
+                ),
+              ),
+              Text (
+                'ART AFICIAONODO',
+                style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.white,
+                    letterSpacing: 2.0,
+                ),
+              ),
+              SizedBox(
+                height: 20,
+                width: 140,
+                child: Divider(
+                  color: Colors.white,
+                  thickness: 2,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20),
+                //padding: EdgeInsets.all(10.0),
+                child: ListTile(
+                  leading: Icon (
+                    Icons.phone_android,
+                    size: 35.0,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+12 123 456 789',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.0,
+                        color: Colors.teal
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20),
+                //padding: EdgeInsets.all(10.0),
+                child: ListTile(
+                  leading: Icon (
+                      Icons.mail_rounded,
+                      size: 35.0,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      '123arthi@gmail.com',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0,
+                          color: Colors.teal
+                      ),
+                    ),
+
+                ),
+              )
+            ],
+
+          ),
+        ),
+      ),
+    );
+  }
+}
+
